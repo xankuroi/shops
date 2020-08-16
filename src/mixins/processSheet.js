@@ -36,7 +36,10 @@ export async function processSheet(url) {
             data[key] = XLSX.utils.sheet_to_json(sheets[key]);
           }
         });
-      return data;
+      return {
+        data,
+        config,
+      };
     });
 }
 

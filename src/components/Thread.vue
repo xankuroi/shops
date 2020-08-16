@@ -1,7 +1,21 @@
 <template>
-  <div></div>
+  <div>
+    <div v-if="overriden" v-html="overriden"></div>
+    <div v-else>
+      Thread Image || Heal {{ data.HEAL }} || Boosts {{ data.Boosts }}
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+import { item } from "../mixins/item";
+
+export default {
+  mixins: [item],
+  computed: {
+    stats() {
+      return 1;
+    },
+  },
+};
 </script>
