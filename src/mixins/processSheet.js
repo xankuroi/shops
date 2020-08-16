@@ -53,7 +53,3 @@ function processItemPages(data, db) {
   Object.keys(data).map((name) => (data[name].data = db[name]));
   return data;
 }
-
-// function processMiscPages(name, data, config) {
-//   return { name, config, data };
-// }
